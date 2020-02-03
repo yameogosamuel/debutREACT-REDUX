@@ -15,7 +15,7 @@ class TestForm extends Component{
 
     submit = e =>{
         e.preventDefault();
-        console.log(this.state)
+        this.props.addUser(this.state);
     }
 
     render() {
