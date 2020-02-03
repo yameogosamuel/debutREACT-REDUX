@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import TestCompo from "./TestCompo";
-
+//import TestCompo from "./TestCompo";
+import List from "./List";
+import TestForm from "./TestForm";
 
 class App extends Component{
 state = {
@@ -15,8 +16,8 @@ state = {
         <div className="App">
 
           <h1>Bonjour à tous!!!!</h1>
-          <TestCompo list={this.state.nameList}/>
-
+          <List list={this.state.nameList}/>
+          <TestForm />
         </div>
     );
 
