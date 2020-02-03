@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import TestCompo from "./TestCompo";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+state = {
+  nameList : [
+    {id: 1, name: 'Samuel', age: 26, sexe: 'Masculin'},
+    {id: 2, name: 'Nathalie', age: 30, sexe: 'Féminin'},
+    {id: 3, name: 'Augustin', age: 5, sexe: 'Masculin'}
+  ]
+}
+  render() {
+    return (
+        <div className="App">
+
+          <h1>Bonjour à tous!!!!</h1>
+          <TestCompo list={this.state.nameList}/>
+
+        </div>
+    );
+
+  }
 }
 
 export default App;
